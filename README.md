@@ -70,3 +70,7 @@ printc用于彩色输出。visit_articles.py是主文件。
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/81a705ee988e483597f2d47cee5ac602~tplv-k3u1fbpfcp-watermark.image)
 
+## 更新
+### printc
+printc是封装了colorama用于在命令行中输出颜色的。更新版本支持Windows系统。
+
