@@ -74,3 +74,5 @@ printc用于彩色输出。visit_articles.py是主文件。
 ### printc
 printc是封装了colorama用于在命令行中输出颜色的。更新版本支持Windows系统。
 
+由于每个人的电脑不同，建议不要使用默认的color.json。
+
