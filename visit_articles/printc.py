@@ -1,6 +1,8 @@
 import json
-from colorama import Fore, Back, Style
+from colorama import init, Fore, Back, Style
 from errors import *
+
+init(convert=True)
 
 
 #前景色和背景色设置
@@ -94,6 +96,7 @@ def color_test():  #测试颜色
     print('首先我们要测试背景颜色。接下来你将看到白色背景的“你好”。')
     print('First we are going to test the background. You will see text with white background.')
     __found=False  #是否找到可用的颜色
+    __bg=Back.BLACK
     #把每一个颜色都试一遍
     for color in bg_range:
         #询问
@@ -108,6 +111,7 @@ def color_test():  #测试颜色
         elif answer=='Y':  #测试成功
             __json['bg_white']=color[1]  #设置背景色
             __found=True  #找到了可用的颜色
+            __bg=color[0]
             break
     if __found==False:  #找不到可用的背景色
         __json['enabled']=False
@@ -120,7 +124,7 @@ def color_test():  #测试颜色
     #把每一个颜色都试一遍
     for color in fg_range:
         #询问
-        print(color[0]+'\n\n你好\n\n'+Style.RESET_ALL)
+        print(__bg+color[0]+'\n\n你好\n\n'+Style.RESET_ALL)
         print('你看到的是黑色前景吗？Are you seeing the text with black foreground?')
         #输入
         answer=input('是：Y，不是：N，乱码：C。Yes:Y, No:N, Chaos:C. 请输入（please input）：')
