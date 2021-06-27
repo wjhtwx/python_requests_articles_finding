@@ -70,6 +70,15 @@ in_depth：现在层数。
 
 depth：允许访问的层数。（就当是一棵树，然后不能超过那么多层）。
 
+### `=>小技巧：禁止跨域名访问`
+在79~81行：
+```python
+'''if urlparse(href).netloc!=urlparse(site).netloc:
+out.printcf('链接跨域名。', __, fg=Fore.RED)
+continue'''
+去掉注释可以禁止跨域名访问。建议不要在CSDN使用，除非单独访问blog.csdn.net，否则会将所有的CSDN文章都禁掉。
+```
+
 ## **visited.py**
 
 ### =>def new_visited(title, link)
@@ -90,3 +99,6 @@ visited.json存储已经爬取过的链接。
 exists：链接是否存在。
 
 error：是否有错误，False代表有，True代表没有。
+
+## **open_in_browser.py**
+用浏览器打开可能喜欢的文章。直接用python运行即可。
