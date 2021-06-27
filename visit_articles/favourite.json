@@ -1,0 +1,25 @@
+[
+    {
+        "key":"划水", 
+        "points":1, 
+        "keys":[
+            "划水"
+        ]
+    }, 
+    {
+        "key":"Windows 11 发布", 
+        "points":0.3, 
+        "keys":[
+            "Windows11", 
+            "Microsoft", 
+            "官宣"
+        ]
+    }, 
+    {
+        "key":"后端", 
+        "points":1, 
+        "keys":[
+            "后端"
+        ]
+    }
+]
